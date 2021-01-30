@@ -2,23 +2,41 @@
   <div>
     <div>Welcome to your Forecast Provider</div>
       <WeatherTable :forecast="forecast"/>
-
   </div>
 </template>
 
 <script>
 import WeatherTable from './WeatherTable.vue';
+import axios from 'axios';
+import config from '../.config.js';
+const { apikey } = config;
 export default {
   components: { WeatherTable },
   name: 'App',
   data() {
     return {
-      forecast: [
-        {temp: 21.3}, {temp: 21.4}
-      ]
+      forecast: []
     };
   },
-  
+  mounted() {
+    const options = {
+      method: 'GET',
+      url: 'https://community-open-weather-map.p.rapidapi.com/forecast',
+      params: {q: 'cleveland,us', units: 'imperial'},
+      headers: {
+        'x-rapidapi-key': apikey,
+        'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com'
+      }
+    };
+
+    axios.request(options)
+      .then((response) => {
+        // console.log(response.data.list);
+        this.forecast = response.data.list;
+      }).catch((error) => {
+        console.error(error);
+      });
+    }
 
 }
 </script>
