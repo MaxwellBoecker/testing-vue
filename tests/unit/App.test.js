@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils';
-import App from './App.vue';
+import App from '../../client/components/App.vue';
 // import mockData from '../../mockData.json';
 
 let wrapper;

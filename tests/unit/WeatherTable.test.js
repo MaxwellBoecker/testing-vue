@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils';
-import WeatherTable from './WeatherTable.vue';
+import WeatherTable from '../../client/components/WeatherTable.vue';
 
 let wrapper;
 
