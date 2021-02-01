@@ -19,11 +19,12 @@
 
 <script>
 import WeatherTableBody from './WeatherTableBody.vue';
+
 export default {
   components: {
-    WeatherTableBody
+    WeatherTableBody,
   },
   name: 'WeatherTable',
-  props: ['forecast']
-}
+  props: ['forecast'],
+};
 </script>

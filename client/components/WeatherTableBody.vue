@@ -17,7 +17,7 @@
 <script>
 export default {
   name: 'WeatherTableBody',
-  props: ['forecast']
+  props: ['forecast'],
 }
 </script>
 

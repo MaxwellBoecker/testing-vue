@@ -21,7 +21,7 @@
 import axios from 'axios';
 import WeatherTable from './WeatherTable.vue';
 import CurrentWeather from './CurrentWeather.vue';
-import config from '../.config.js';
+import config from '../.config';
 
 const { apikey } = config;
 export default {
