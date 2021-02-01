@@ -1,6 +1,6 @@
 <template>
-  <tbody>
-    <tr v-for="f in forecast" :key="f.dt_txt">
+  <tbody class="results-body">
+    <tr v-for="f in forecast" :key="f.dt_txt" class="results-row">
       <td>{{f.dt_txt}}</td>
       <td>{{f.main.temp}}</td>
       <td>{{f.main.humidity}}%</td>
@@ -20,3 +20,9 @@ export default {
   props: ['forecast']
 }
 </script>
+
+<style scoped>
+  .results-row {
+    text-align: "center";
+  }
+</style>
