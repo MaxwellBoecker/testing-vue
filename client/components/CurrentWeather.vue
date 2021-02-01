@@ -1,11 +1,11 @@
 <template>
   <div class="weather-results-container">
     <div class="weather-result-items">
-      <p>Temperature: {{forecast[0].main.temp}}</p>
-      <p>Feels Like: {{forecast[0].main.feels_like}}</p>
-      <p>Humidity: {{forecast[0].main.humidity}}</p>
-      <p>High: {{forecast[0].main.temp_max}}</p>
-      <p>Low: {{forecast[0].main.temp_min}}</p>
+      <p>Temperature: {{forecast[0].main.temp}}° F</p>
+      <p>Feels Like: {{forecast[0].main.feels_like}}° F</p>
+      <p>Humidity: {{forecast[0].main.humidity}}%</p>
+      <p>High: {{forecast[0].main.temp_max}}° F</p>
+      <p>Low: {{forecast[0].main.temp_min}}° F</p>
       <p>Description: {{forecast[0].weather[0].description}}</p>
     </div>
   </div>
