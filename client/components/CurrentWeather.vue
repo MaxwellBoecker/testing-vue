@@ -1,0 +1,32 @@
+<template>
+  <div class="weather-results-container">
+    <div class="weather-result-items">
+      <p>Temperature: {{forecast[0].main.temp}}</p>
+      <p>Feels Like: {{forecast[0].main.feels_like}}</p>
+      <p>Humidity: {{forecast[0].main.humidity}}</p>
+      <p>High: {{forecast[0].main.temp_max}}</p>
+      <p>Low: {{forecast[0].main.temp_min}}</p>
+      <p>Description: {{forecast[0].weather[0].description}}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'CurrentWeather',
+  props: ['forecast'],
+};
+</script>
+
+<style scoped>
+  .weather-results-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .weather-result-items {
+    margin: 0 10px;
+    padding: 10px;
+  }
+
+</style>
